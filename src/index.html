@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iLink</title>
+    <meta name="keywords"
+          content="webpack, webpack-configuration, template, boilerplate, setup, html, css, sass, javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="images/content/logo.svg" alt="logo"/>
+    </div>
+    <nav>
+        <a href="#about">Jane Doe</a>
+        <a href="#form_box">Tell us about yourself</a>
+        <a href="#slider_box">Slider</a>
+    </nav>
+</header>
+<div class="about" id="about">
+    <img class="left_angle" src="images/content/left_angle.svg" alt="left angle">
+    <img class="right_angle" src="images/content/right_angle.svg" alt="right angle">
+    <div class="cubes">
+        <img src="images/content/cubes.svg" alt="cubes">
+    </div>
+    <div class="content">
+        <div class="image">
+            <img src="images/content/photo.jpg" alt="Jane Doe">
+        </div>
+        <div class="info">
+            <h1>Jane Doe</h1>
+            <div class="main_information">
+                <span>Date of birth<span>21.04.2001</span></span>
+                <span>Gender<span>Female</span></span>
+                <span>Country<span>Corea</span></span>
+            </div>
+            <div class="about-me">
+                <h2>About me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. <br>
+                    <br>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="form_box" id="form_box">
+    <img class="left_image" src="images/content/cubes_for_form_l.svg" alt="">
+    <img class="right_image" src="images/content/cubes_for_form_r.svg" alt="">
+    <form class="form" action="#" id="form">
+        <h1>Tell us about yourself</h1>
+        <div class="form_item_box">
+            <div class="form_item name">
+                <label for="form_name">Your name</label>
+                <input id="form_name" class="req" type="text" placeholder="Tell us your name" name="name">
+            </div>
+            <div class="form_item gender">
+                <label for="form_gender">Your gender</label>
+                <select onchange=" this.dataset.chosen = this.value; " id="form_gender" class="select-gender req"
+                        name="gender">
+                    <option value="1" disabled selected>Chose your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="break"></div>
+            <div class="form_item country">
+                <label for="form_country">Your country</label>
+                <input id="form_country" class="req" type="text" placeholder="Where are your from?" name="country">
+            </div>
+            <div class="form_item city">
+                <label for="form_city">Your city</label>
+                <input id="form_city" class="req" type="text" placeholder="Your native city" name="city">
+            </div>
+            <div class="form_item date">
+                <label for="form_date">Your date of birth</label>
+                <input id="form_date" class="req date" type="text" placeholder="dd.mm.yyyy" name="date">
+            </div>
+
+            <div class="image_box">
+                <div class="drag_area">
+                    <span>Proof your identity with some documents</span>
+                    <button>Add document</button>
+                    <input class="req" name="image" type="file" multiple hidden>
+                </div>
+
+                <div class="added_images">
+                </div>
+            </div>
+        </div>
+        <div class="send_btn_box">
+            <button type="submit" class="send_btn" id="submit">
+                Send info
+            </button>
+        </div>
+    </form>
+</div>
+<div class="slider_box" id="slider_box">
+    <div class="slider">
+        <div class="slider_text">
+            <h1>Slide this photo</h1>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+        </div>
+        <img class="background-img" src="images/content/slide1.jpg" alt="back">
+        <a class="prev"><img src="images/content/prev.svg" alt="prev"></a>
+        <a class="next"><img src="images/content/next.svg" alt="next"></a>
+        <div class="dots_list">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+.form_box {
+  height: 750px;
+  display: flex;
+  justify-content: center;
+
+  .left_image {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+  }
+
+  .right_image {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
+
+  form {
+    width: 1312px/1440px * 100%;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      color: #303030;
+      line-height: 72px;
+      margin-top: 56px;
+      margin-bottom: 40px;
+    }
+
+    .form_item_box {
+      display: flex;
+      flex-wrap: wrap;
+
+
+      .break {
+        flex-basis: 100%;
+        height: 0;
+      }
+
+      .form_item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 32px;
+
+        &:first-child {
+          margin-bottom: 40px;
+        }
+
+        label {
+          color: #303030;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 19px;
+          margin-bottom: 8px;
+        }
+
+        input {
+          width: 304px;
+          height: 56px;
+          border: 1px solid #D9BBFF;
+          box-sizing: border-box;
+          border-radius: 12px;
+          background: white;
+          color: #9F9F9F;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: normal;
+          padding-left: 11px;
+          padding-right: 21px;
+
+          &:focus, &:not(:placeholder-shown) {
+            border: 1px solid #8E43ED;
+            color: #303030;
+            outline: none
+          }
+        }
+
+        select {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          width: 304px;
+          height: 56px;
+          background: #FFFFFF;
+          border: 1px solid #D4B1FF;
+          box-sizing: border-box;
+          border-radius: 12px;
+          color: #9F9F9F;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: normal;
+          padding-left: 11px;
+          padding-right: 21px;
+
+          &:focus {
+            border: 1px solid #8E43ED;
+            color: #303030;
+            outline: none
+          }
+
+          &::-ms-expand {
+            display: none;
+          }
+
+          &[data-chosen='Male'], &[data-chosen='Female'] {
+            border: 1px solid #8E43ED;
+            color: #303030;
+            outline: none
+          }
+        }
+      }
+
+      .image_box {
+        display: flex;
+        flex-direction: column;
+
+        .drag_area {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 976px;
+          height: 104px;
+          margin-top: 56px;
+          background: white;
+          border: 2px dashed #D9BBFF;
+          box-sizing: border-box;
+          border-radius: 12px;
+
+          &.active {
+            border: 2px solid #D9BBFF;
+          }
+
+          span {
+            font-size: 16px;
+            line-height: 24px;
+            color: #9993BD;
+            margin-right: 16px;
+          }
+
+          button {
+            width: 212px;
+            height: 56px;
+            background: #FFFFFF;
+            border: 1px solid #8E43ED;
+            box-sizing: border-box;
+            border-radius: 12px;
+            color: #8E43ED;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+              background: #8E43ED;
+              color: #FFFFFF;
+            }
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .added_images {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+          .image_preview {
+            position: relative;
+            margin-right: 10px;
+            width: 256px;
+            height: 56px;
+            background: #fff;
+            border: 1px solid #D9BBFF;
+            box-sizing: border-box;
+            border-radius: 12px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+
+            .image_information {
+              display: flex;
+              flex-direction: column;
+              margin-left: 12px;
+
+              .image_name {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                color: #303030;
+              }
+
+              .image_description {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                color: #AFAFAF;
+              }
+            }
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+
+            button {
+              position: absolute;
+              border: none;
+              background: none;
+              margin-left: 59px;
+              right: 16px;
+              cursor: pointer;
+
+              img {
+                border-radius: 0;
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .send_btn_box {
+      display: flex;
+
+      .send_btn {
+        width: 212px;
+        height: 56px;
+        margin-top: 112px;
+        background: #8E43ED;
+        border-radius: 12px;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+      }
+
+      .with_added_image {
+        margin-top: 48px;
+      }
+
+      .disabled {
+        background: #DED9E4;
+      }
+
+      .completed {
+        width: 131px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 124px;
+        margin-left: 24px;
+
+        img {
+          margin-right: 8px;
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+    }
+
+  }
+}
